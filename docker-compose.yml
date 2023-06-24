@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  firebase:
+    build: ./compose/node
+    volumes:
+      - ./volume/firebase:/home/node/firebase
+    ports:
+      - "9005:9005"
+      - "5000:5000"
+      - "3000:3000"
+    tty: true
